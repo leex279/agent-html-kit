@@ -600,8 +600,8 @@ ${hasInbox ? `<div class="rk-lane inbox" data-col="Inbox"><div class="lh"><span>
   /* ---------- markdown renderer (for .md written by the agent) ---------- */
 
   const FENCES = {
-    chart: (ls) => { const m = splitMeta(ls, ["title", "type", "unit"]); return mk(chart, ls, m); },
-    diagram: (ls) => { const m = splitMeta(ls, ["title"]); return mk(diagram, ls, m); },
+    chart: (ls) => { const m = splitMeta(ls, ["title", "type", "unit", "noavg"]); return mk(chart, ls, m); },
+    diagram: (ls) => { const m = splitMeta(ls, ["title", "direction"]); return mk(diagram, ls, m); },
     board: (ls) => { const m = splitMeta(ls, ["title", "columns"]); return mk(board, ls, m); },
     stats: (ls) => mk(stats, ls),
     steps: (ls) => mk(steps, ls),
